@@ -1,0 +1,16 @@
+@import '_mixins';
+
+$color-scheme-primary: $color-scheme-settings-primary;
+$color-scheme-secondary: $color-scheme-settings-secondary;
+
+body.settings-screen {
+	background-color: $color-scheme-primary;
+
+	#top-banner {
+		background-color: $color-scheme-secondary;
+
+		.location-icon {
+			color: $color-scheme-primary;
+		}
+	}
+}

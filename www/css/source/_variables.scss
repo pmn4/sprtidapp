@@ -1,0 +1,47 @@
+$font-family-headline: Matchbook, Impact, sans-serif;
+$font-family-content: OpenSans, Helvetica, sans-serif;
+
+
+// internal variables!
+$white: #ecf0f1, #bdc3c7; // white
+$grey: #95a5a6, #7f8c8d;
+$black: #34495e, #2c3e50; // black
+$red: #e74c3c, #c0392b; // #ef5734
+$orange: #e67e22, #d35400;
+$yellow: #f1c40f, #f39c12; // #ffcc2f
+$green: #2ecc71, #27ae60; // #2baf2b
+$green-blue: #1abc9c, #16a085;
+$blue: #3498db, #2980b9; // #00acee
+$purple: #9b59b6, #8e44ad;
+
+$color-scheme-foreground: $white;
+$color-scheme-foreground-primary:   nth($color-scheme-foreground, 1);
+$color-scheme-foreground-secondary: nth($color-scheme-foreground, 2);
+
+$color-scheme-background: $black;
+$color-scheme-background-primary:   nth($color-scheme-background, 1);
+$color-scheme-background-secondary: nth($color-scheme-background, 2);
+
+$color-scheme-scan: $green;
+$color-scheme-scan-primary:   nth($color-scheme-scan, 1);
+$color-scheme-scan-secondary: nth($green, 2);
+
+$color-scheme-create: $red;
+$color-scheme-create-primary:   nth($color-scheme-create, 1);
+$color-scheme-create-secondary: nth($color-scheme-create, 2);
+
+$color-scheme-shop: $blue;
+$color-scheme-shop-primary:   nth($color-scheme-shop, 1);
+$color-scheme-shop-secondary: nth($color-scheme-shop, 2);
+
+$color-scheme-settings: $yellow;
+$color-scheme-settings-primary:   nth($color-scheme-settings, 1);
+$color-scheme-settings-secondary: nth($color-scheme-settings, 2);
+
+$default-spacing: 10px;
+
+$transition-on-speed: 333;
+$transition-off-speed: 2 * $transition-on-speed;
+
+$nope: 0;
+$golden-ratio: 1.61803399;
