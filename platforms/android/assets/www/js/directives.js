@@ -1,4 +1,4 @@
-;(function (angular, BarcodeScanner, undefined) {
+;(function (angular, ScannerClass, undefined) {
 	'use strict';
 
 	/* Directives */
@@ -9,6 +9,6 @@
 				elm.text(version);
 			};
 		}])
-		.directive('scanner', ['$log', BarcodeScanner])
+		.directive('cordovaBarcodeScanner', ['$log', ScannerClass])
 	;
-})(angular, BarcodeScanner);
+})(angular, AngularCordova.Plugins.BarcodeScanner);

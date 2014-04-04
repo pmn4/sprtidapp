@@ -1,0 +1,118 @@
+@import 'compass/reset',
+        'compass/css3/transform';
+
+@import '_mixins';
+
+@import '_fonts',
+        '_icomoon',
+        'pages/_home',
+        'pages/_scan',
+        'pages/_create',
+        'pages/_shop',
+        'pages/_settings';
+
+html,
+body {
+	min-height: 100%;
+	min-width: 100%;
+	color: $color-scheme-foreground-primary;
+	background: $color-scheme-background-primary;
+	font-family: $font-family-content;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+html {
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $font-family-headline;
+	text-transform: uppercase;
+	color: $color-scheme-foreground-primary;
+
+	&.default {
+		color: $color-scheme-foreground !important;
+	}
+
+	span {
+		font-weight: normal;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	em {
+		color: $color-scheme-foreground-primary;
+	}
+}
+$h1-font-size: 36px; // this was just for the presentaiton I did
+$h6-font-size: 16px;
+
+$hmax: 6;
+@for $i from 1 through $hmax {
+	$font-size: floor(($h1-font-size - $h6-font-size) * ($hmax - $i) / $hmax + $h6-font-size);
+	h#{$i}, .h#{$i} {
+		line-height: $font-size;
+		font-size: $font-size;
+	}
+}
+
+#viewport {
+	min-height: 100%;
+}
+
+$top-banner-height: 70px !default;
+#top-banner {
+	position: relative;
+	border-bottom: 1px solid $color-scheme-foreground-primary;
+	padding: $nope;
+	background: $color-scheme-background-secondary;
+	overflow: hidden;
+
+	font-size: 24px;
+	text-align: center;
+
+	.navigation-back {
+		position: absolute;
+		left: $default-spacing;
+		top: $default-spacing;
+		color: $color-scheme-foreground-primary;
+		font-size: $top-banner-height - 2 * $default-spacing;
+		text-decoration: none;
+		width: $top-banner-height;
+		text-align: center;
+		z-index: 1;
+	}
+
+	.location-icon {
+		position: absolute;
+		top: -$default-spacing;
+		left: 0;
+		font-size: $top-banner-height + 2 * $default-spacing;
+		width: auto;
+		z-index: 0;
+
+		@include rotate(-15deg);
+	}
+
+	.navigation-location {
+		display: block;
+		font-size: $top-banner-height - $default-spacing;
+		line-height: $top-banner-height - $default-spacing;
+		padding-top: $default-spacing;
+	}
+}
+.page-content {
+	padding: $default-spacing;
+}
+
+#footer-navigation {
+	@include clearfix;
+
+	.navigation-link {
+		float: left;
+	}
+}

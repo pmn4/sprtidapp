@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'Matchbook';
+	src:url('/fonts/Matchbook.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'OpenSans';
+	// src:url('/fonts/OpenSans-Light.ttf') format('truetype');
+	src:url('/fonts/OpenSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans';
+	// src:url('/fonts/OpenSans-LightItalic.ttf') format('truetype');
+	src:url('/fonts/OpenSans-RegularItalic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'OpenSans';
+	// src:url('/fonts/OpenSans-Semibold.ttf') format('truetype');
+	src:url('/fonts/OpenSans-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'OpenSans';
+	// src:url('/fonts/OpenSans-SemiboldItalic.ttf') format('truetype');
+	src:url('/fonts/OpenSans-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}

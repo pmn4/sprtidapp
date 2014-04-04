@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" ng-app="sprtidApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" type="text/css" href="css/sprtid.css" />
+	</head>
+
+	<body class="{{bodyClassname}}">
+		<div ng-view id="viewport"></div>
+		<!-- <div ng-include="partials/footer.html"></div> -->
+
+		<script src="cordova.js"></script>
+		<script src="lib/bower_components/angular/angular.js"></script>
+		<script src="lib/bower_components/angular-route/angular-route.js"></script>
+		<script src="js/services.js"></script>
+
+		<script src="js/controllers.js"></script>
+
+		<script src="js/filters.js"></script>
+
+		<script src="js/directives/BarcodeScanner.js"></script>
+		<script src="js/directives.js"></script>
+
+		<script src="js/app.js"></script>
+	</body>
+</html>

@@ -7,6 +7,27 @@
 		}])
 		.controller("ScanController", ["$scope", "$log", function($scope, $log) {
 			$log.info("ScanController", arguments);
+
+			$scope.title = "Scanning";
+			$scope.response = "";
+
+			$scope.onSuccess = function (results) {
+				$log.info("ScanController :: ~ctor (success)", results);
+
+				$scope.$apply(function() {
+					$scope.title = "Success";
+					$scope.response = JSON.stringify(results);
+				});
+			};
+
+			$scope.onError = function (results) {
+				$log.info("ScanController :: ~ctor (error)", results);
+
+				$scope.$apply(function() {
+					$scope.title = "Failure";
+					$scope.response = JSON.stringify(results);
+				});
+			};
 		}])
 		.controller("IdController", ["$scope", "$log", function($scope, $log) {
 			$log.info("IdController", arguments);

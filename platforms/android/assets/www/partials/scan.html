@@ -6,7 +6,9 @@
 	</div>
 
 	<div class="page-content">
-		scan stuff
-		<scanner></scanner>
+		<h2 ng-click="click()">scan stuff</h2>
+		<h3>{{ title }}</h3>
+		<pre>{{ response }}</pre>
+		<cordova-barcode-scanner on-success="onSuccess(results)" on-error="onError(results)"></cordova-barcode-scanner>
 	</div>
 </div>

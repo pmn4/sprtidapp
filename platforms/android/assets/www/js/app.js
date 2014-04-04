@@ -1,4 +1,4 @@
-;(function (angular, BarcodeScanner, undefined) {
+;(function (angular, undefined) {
 	"use strict";
 
 	// Declare app level module which depends on filters, and services
@@ -50,4 +50,4 @@
 				}
 			});
 		}]);
-})(angular, BarcodeScanner);
+})(angular);

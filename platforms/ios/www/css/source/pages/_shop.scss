@@ -1,0 +1,16 @@
+@import '_mixins';
+
+$color-scheme-primary: $color-scheme-shop-primary;
+$color-scheme-secondary: $color-scheme-shop-secondary;
+
+body.shop-screen {
+	background-color: $color-scheme-primary;
+
+	#top-banner {
+		background-color: $color-scheme-secondary;
+
+		.location-icon {
+			color: $color-scheme-primary;
+		}
+	}
+}
