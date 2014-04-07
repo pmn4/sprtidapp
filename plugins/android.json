@@ -148,6 +148,9 @@
     "installed_plugins": {
         "com.phonegap.plugins.barcodescanner": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },
     "dependent_plugins": {}

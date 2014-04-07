@@ -23,12 +23,16 @@
         },
         "config.xml": {
             "/*": {
-                "<feature name=\"BarcodeScanner\"><param name=\"ios-package\" value=\"CDVBarcodeScanner\" /></feature>": 1
+                "<feature name=\"BarcodeScanner\"><param name=\"ios-package\" value=\"CDVBarcodeScanner\" /></feature>": 1,
+                "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>": 1
             }
         }
     },
     "installed_plugins": {
         "com.phonegap.plugins.barcodescanner": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "org.apache.cordova.console": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },
