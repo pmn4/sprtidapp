@@ -5,49 +5,64 @@
 	angular
 		.module("sprtidApp", [
 			"ngRoute",
+			"sprtidApp.factories",
 			"sprtidApp.filters",
 			"sprtidApp.services",
 			"sprtidApp.directives",
 			"sprtidApp.controllers"
 		])
-		.config(["$routeProvider", function($routeProvider) {
+		.config(["$locationProvider", "$routeProvider", function($locationProvider, $routeProvider) {
+			$locationProvider.html5Mode(true).hashPrefix('!');
+
 			$routeProvider.when("/home", {
-				templateUrl: "partials/home.html",
+				templateUrl: "/partials/home.html",
 				controller: "HomeController",
 				bodyClassname: "home-screen"
 			});
 			$routeProvider.when("/scan", {
-				templateUrl: "partials/scan.html",
+				templateUrl: "/partials/scan.html",
 				controller: "ScanController",
 				bodyClassname: "scan-screen"
 			});
-			$routeProvider.when("/id", {
-				templateUrl: "partials/id.html",
+			$routeProvider.when("/id/:id", {
+				templateUrl: "/partials/id.html",
 				controller: "IdController",
-				bodyClassname: "id-screen"
+				bodyClassname: "identity-screen"
 			});
 			$routeProvider.when("/create", {
-				templateUrl: "partials/create.html",
+				templateUrl: "/partials/create.html",
 				controller: "CreateController",
 				bodyClassname: "create-screen"
 			});
 			$routeProvider.when("/shop", {
-				templateUrl: "partials/shop.html",
+				templateUrl: "/partials/shop.html",
 				controller: "ShopController",
 				bodyClassname: "shop-screen"
 			});
 			$routeProvider.when("/settings", {
-				templateUrl: "partials/settings.html",
+				templateUrl: "/partials/settings.html",
 				controller: "SettingsController",
 				bodyClassname: "settings-screen"
 			});
-			$routeProvider.otherwise({redirectTo: "/home"});
+			$routeProvider.otherwise({
+				redirectTo: "/home"
+			});
 		}])
-		.run(['$location', '$rootScope', function ($location, $rootScope) {
-			$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+		.run(["$location", "$rootScope", "$log", function ($location, $rootScope, $log) {
+			$rootScope.$on("$locationChangeStart", function () {
+				$log.debug("$locationChangeStart", arguments);
+			});
+
+			$rootScope.$on("$routeChangeSuccess", function (event, current, previous) {
 				if (current && current.$$route) {
 					$rootScope.bodyClassname = current.$$route.bodyClassname;
+				} else {
+					$rootScope.bodyClassname = "";
 				}
+			});
+
+			$rootScope.$on("$routeChangeError", function (event, current, previous, rejection) {
+				$log.debug("failed to change routes", arguments);
 			});
 		}]);
 })(angular);

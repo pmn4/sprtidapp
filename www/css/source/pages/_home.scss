@@ -40,7 +40,11 @@ body.home-screen {
 			text-decoration: none;
 			vertical-align: middle; // ew!
 
-			$features: 'create' $color-scheme-create-primary, 'scan' $color-scheme-scan-primary, 'settings' $color-scheme-settings-primary, 'shop' $color-scheme-shop-primary;
+			$features: 'create' $color-scheme-create-primary,
+			           'scan' $color-scheme-scan-primary,
+			           'settings' $color-scheme-settings-primary,
+			           'shop' $color-scheme-shop-primary,
+			           'identity' $color-scheme-identity-primary;
 			@each $feature in $features {
 				$class: nth($feature, 1);
 				$color: nth($feature, 2);

@@ -1,7 +1,29 @@
 /*jshint smarttabs:true */
+/*jshint eqnull:true */
 
 var AngularCordova = AngularCordova || {};
 AngularCordova.Plugins = AngularCordova.Plugins || {};
+
+function BarcodeScannerResponse (text, format, cancelled) {
+	this.text = text || "";
+	this.format = format || BarcodeScannerResponse.Types.TEXT_TYPE;
+	this.cancelled = !!cancelled;
+}
+
+BarcodeScannerResponse.create = function (obj) {
+	if(!obj || typeof(obj.text) === "undefined" && typeof(obj.format) === "undefined" && typeof(obj.cancelled) === "undefined") {
+		return null;
+	}
+
+	return new BarcodeScannerResponse(obj.text, obj.format, obj.cancelled);
+};
+
+BarcodeScannerResponse.Types = {
+	TEXT_TYPE: "TEXT_TYPE",
+	EMAIL_TYPE: "EMAIL_TYPE",
+	PHONE_TYPE: "PHONE_TYPE",
+	SMS_TYPE: "SMS_TYPE"
+};
 
 AngularCordova.Plugins.BarcodeScanner = (function (document, cordova, undefined) {
 	'use strict';
@@ -20,22 +42,26 @@ AngularCordova.Plugins.BarcodeScanner = (function (document, cordova, undefined)
 				$log.info("BarcodeScanner#link", arguments);
 
 				// called when camera stream is loaded
-				var fnOnSuccess = function (results) {
-					$log.log("BarcodeScanner :: link (success)", results);
+				var fnOnSuccess = function (result) {
+					$log.log("BarcodeScanner :: link (success)", result);
 
 					/* Call custom callback */
 					if (scope.onSuccess) {
-						scope.onSuccess({results: results});
+						scope.onSuccess({
+							results: BarcodeScannerResponse.create(result)
+						});
 					}
 				};
 
 				// called when any error happens
-				var fnOnError = function (results) {
-					$log.log("BarcodeScanner :: link (error)", results);
+				var fnOnError = function (result) {
+					$log.log("BarcodeScanner :: link (error)", result);
 
 					/* Call custom callback */
 					if (scope.onError) {
-						scope.onError({results: results});
+						scope.onError({
+							results: BarcodeScannerResponse.create(result)
+						});
 					}
 
 					return;

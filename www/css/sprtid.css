@@ -303,6 +303,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   content: "\e624";
 }
 
+/* line 6, source/pages/_create.scss */
+body.create-screen {
+  background-color: #e74c3c;
+}
+/* line 9, source/pages/_create.scss */
+body.create-screen #top-banner {
+  background-color: #c0392b;
+}
+/* line 12, source/pages/_create.scss */
+body.create-screen #top-banner .location-icon {
+  color: #e74c3c;
+}
+
 /* line 3, source/pages/_home.scss */
 body.home-screen {
   min-height: 100%;
@@ -360,34 +373,51 @@ body.home-screen .navigation-link a {
   text-decoration: none;
   vertical-align: middle;
 }
-/* line 48, source/pages/_home.scss */
+/* line 52, source/pages/_home.scss */
 body.home-screen .navigation-link a.create {
   background-color: #e74c3c;
 }
-/* line 48, source/pages/_home.scss */
+/* line 52, source/pages/_home.scss */
 body.home-screen .navigation-link a.scan {
   background-color: #2ecc71;
 }
-/* line 48, source/pages/_home.scss */
+/* line 52, source/pages/_home.scss */
 body.home-screen .navigation-link a.settings {
   background-color: #f1c40f;
 }
-/* line 48, source/pages/_home.scss */
+/* line 52, source/pages/_home.scss */
 body.home-screen .navigation-link a.shop {
   background-color: #3498db;
 }
-/* line 54, source/pages/_home.scss */
+/* line 52, source/pages/_home.scss */
+body.home-screen .navigation-link a.identity {
+  background-color: #95a5a6;
+}
+/* line 58, source/pages/_home.scss */
 body.home-screen .navigation-link a .icon:before {
   display: block;
   font-size: 100px;
   color: #ecf0f1;
   line-height: 200px;
 }
-/* line 61, source/pages/_home.scss */
+/* line 65, source/pages/_home.scss */
 body.home-screen .navigation-link a .navigation-label {
   position: absolute;
   right: 10px;
   bottom: 10px;
+}
+
+/* line 6, source/pages/_identity.scss */
+body.identity-screen {
+  background-color: #95a5a6;
+}
+/* line 9, source/pages/_identity.scss */
+body.identity-screen #top-banner {
+  background-color: #7f8c8d;
+}
+/* line 12, source/pages/_identity.scss */
+body.identity-screen #top-banner .location-icon {
+  color: #95a5a6;
 }
 
 /* line 6, source/pages/_scan.scss */
@@ -403,17 +433,17 @@ body.scan-screen #top-banner .location-icon {
   color: #2ecc71;
 }
 
-/* line 6, source/pages/_create.scss */
-body.create-screen {
-  background-color: #e74c3c;
+/* line 6, source/pages/_settings.scss */
+body.settings-screen {
+  background-color: #f1c40f;
 }
-/* line 9, source/pages/_create.scss */
-body.create-screen #top-banner {
-  background-color: #c0392b;
+/* line 9, source/pages/_settings.scss */
+body.settings-screen #top-banner {
+  background-color: #f39c12;
 }
-/* line 12, source/pages/_create.scss */
-body.create-screen #top-banner .location-icon {
-  color: #e74c3c;
+/* line 12, source/pages/_settings.scss */
+body.settings-screen #top-banner .location-icon {
+  color: #f1c40f;
 }
 
 /* line 6, source/pages/_shop.scss */
@@ -429,20 +459,7 @@ body.shop-screen #top-banner .location-icon {
   color: #3498db;
 }
 
-/* line 6, source/pages/_settings.scss */
-body.settings-screen {
-  background-color: #f1c40f;
-}
-/* line 9, source/pages/_settings.scss */
-body.settings-screen #top-banner {
-  background-color: #f39c12;
-}
-/* line 12, source/pages/_settings.scss */
-body.settings-screen #top-banner .location-icon {
-  color: #f1c40f;
-}
-
-/* line 15, source/sprtid.scss */
+/* line 16, source/sprtid.scss */
 html,
 body {
   min-height: 100%;
@@ -454,82 +471,82 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 24, source/sprtid.scss */
+/* line 25, source/sprtid.scss */
 html {
   height: 100%;
 }
 
-/* line 29, source/sprtid.scss */
+/* line 30, source/sprtid.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: Matchbook, Impact, sans-serif;
   text-transform: uppercase;
   color: #ecf0f1;
 }
-/* line 34, source/sprtid.scss */
+/* line 35, source/sprtid.scss */
 h1.default, h2.default, h3.default, h4.default, h5.default, h6.default,
 .h1.default, .h2.default, .h3.default, .h4.default, .h5.default, .h6.default {
   color: #ecf0f1, #bdc3c7 !important;
 }
-/* line 38, source/sprtid.scss */
+/* line 39, source/sprtid.scss */
 h1 span, h2 span, h3 span, h4 span, h5 span, h6 span,
 .h1 span, .h2 span, .h3 span, .h4 span, .h5 span, .h6 span {
   font-weight: normal;
 }
-/* line 42, source/sprtid.scss */
+/* line 43, source/sprtid.scss */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
   text-decoration: none;
   color: inherit;
 }
-/* line 47, source/sprtid.scss */
+/* line 48, source/sprtid.scss */
 h1 em, h2 em, h3 em, h4 em, h5 em, h6 em,
 .h1 em, .h2 em, .h3 em, .h4 em, .h5 em, .h6 em {
   color: #ecf0f1;
 }
 
-/* line 57, source/sprtid.scss */
+/* line 58, source/sprtid.scss */
 h1, .h1 {
   line-height: 32px;
   font-size: 32px;
 }
 
-/* line 57, source/sprtid.scss */
+/* line 58, source/sprtid.scss */
 h2, .h2 {
   line-height: 29px;
   font-size: 29px;
 }
 
-/* line 57, source/sprtid.scss */
+/* line 58, source/sprtid.scss */
 h3, .h3 {
   line-height: 26px;
   font-size: 26px;
 }
 
-/* line 57, source/sprtid.scss */
+/* line 58, source/sprtid.scss */
 h4, .h4 {
   line-height: 22px;
   font-size: 22px;
 }
 
-/* line 57, source/sprtid.scss */
+/* line 58, source/sprtid.scss */
 h5, .h5 {
   line-height: 19px;
   font-size: 19px;
 }
 
-/* line 57, source/sprtid.scss */
+/* line 58, source/sprtid.scss */
 h6, .h6 {
   line-height: 16px;
   font-size: 16px;
 }
 
-/* line 63, source/sprtid.scss */
+/* line 64, source/sprtid.scss */
 #viewport {
   min-height: 100%;
 }
 
-/* line 68, source/sprtid.scss */
+/* line 69, source/sprtid.scss */
 #top-banner {
   position: relative;
   border-bottom: 1px solid #ecf0f1;
@@ -539,7 +556,7 @@ h6, .h6 {
   font-size: 24px;
   text-align: center;
 }
-/* line 78, source/sprtid.scss */
+/* line 79, source/sprtid.scss */
 #top-banner .navigation-back {
   position: absolute;
   left: 10px;
@@ -551,7 +568,7 @@ h6, .h6 {
   text-align: center;
   z-index: 1;
 }
-/* line 90, source/sprtid.scss */
+/* line 91, source/sprtid.scss */
 #top-banner .location-icon {
   position: absolute;
   top: -10px;
@@ -565,7 +582,7 @@ h6, .h6 {
   -o-transform: rotate(-15deg);
   transform: rotate(-15deg);
 }
-/* line 101, source/sprtid.scss */
+/* line 102, source/sprtid.scss */
 #top-banner .navigation-location {
   display: block;
   font-size: 60px;
@@ -573,12 +590,12 @@ h6, .h6 {
   padding-top: 10px;
 }
 
-/* line 108, source/sprtid.scss */
+/* line 109, source/sprtid.scss */
 .page-content {
   padding: 10px;
 }
 
-/* line 112, source/sprtid.scss */
+/* line 113, source/sprtid.scss */
 #footer-navigation {
   zoom: 1;
 }
@@ -591,7 +608,7 @@ h6, .h6 {
   font-size: 0;
   visibility: hidden;
 }
-/* line 115, source/sprtid.scss */
+/* line 116, source/sprtid.scss */
 #footer-navigation .navigation-link {
   float: left;
 }
