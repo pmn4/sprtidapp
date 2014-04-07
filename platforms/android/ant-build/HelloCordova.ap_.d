@@ -105,6 +105,7 @@
 /Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/css/source/sprtid.scss \
 /Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/css/source/pages/_create.scss \
 /Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/css/source/pages/_home.scss \
+/Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/css/source/pages/_identity.scss \
 /Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/css/source/pages/_scan.scss \
 /Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/css/source/pages/_settings.scss \
 /Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/css/source/pages/_shop.scss \
@@ -126,6 +127,7 @@
 /Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/js/controllers.js \
 /Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/js/directives \
 /Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/js/directives.js \
+/Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/js/factories.js \
 /Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/js/filters.js \
 /Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/js/services.js \
 /Users/pmn/code/personal/sprtidapp/platforms/android/assets/www/js/directives/BarcodeScanner.js \

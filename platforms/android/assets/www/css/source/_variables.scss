@@ -38,6 +38,10 @@ $color-scheme-settings: $yellow;
 $color-scheme-settings-primary:   nth($color-scheme-settings, 1);
 $color-scheme-settings-secondary: nth($color-scheme-settings, 2);
 
+$color-scheme-identity: $grey;
+$color-scheme-identity-primary:   nth($color-scheme-identity, 1);
+$color-scheme-identity-secondary: nth($color-scheme-identity, 2);
+
 $default-spacing: 10px;
 
 $transition-on-speed: 333;
